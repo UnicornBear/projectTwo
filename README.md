@@ -2,6 +2,8 @@
 <p>A full stack, MVC (Model-View-Controller) application that allows you to ???.</p>
 <img src="">
 
+visit the application hosted on Heroku: https://projecttwo072019.herokuapp.com
+
 ## Table of contents
   * [Live](#live)
   * [About this project](#about-this-project)
@@ -65,8 +67,8 @@ To set up this application locally on your computer, perform the following steps
 ### <a name="clone-repository"></a> 1. Clone the repository
 The first step is to clone the project repository to a local directory on your computer. To clone the repository, run the following commands:
 <pre>
-  git clone ***************************
-  cd *****************
+  git clone git@github.com:UnicornBear/projectTwo.git
+  cd projectTwo
 </pre>
 
 ## <a name="screenshots"></a> Screenshots
