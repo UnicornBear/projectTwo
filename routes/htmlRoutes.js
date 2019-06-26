@@ -3,19 +3,19 @@ var db = require("../models");
 module.exports = function(app) {
   // Load index page
   app.get("/", function(req, res) {
-    db.Example.findAll({}).then(function(dbExamples) {
+    db.Chore.findAll({}).then(function(dbChores) {
       res.render("index", {
-        msg: "Welcome!",
-        examples: dbExamples
+        msg: "Welcome Family!  -  You Ready to earn some points??",
+        chores: dbChores
       });
     });
   });
 
   // Load example page and pass in an example by id
-  app.get("/example/:id", function(req, res) {
-    db.Example.findOne({ where: { id: req.params.id } }).then(function(dbExample) {
-      res.render("example", {
-        example: dbExample
+  app.get("/chore/:id", function(req, res) {
+    db.Chore.findOne({ where: { id: req.params.id } }).then(function(dbChore) {
+      res.render("chore", {
+        chore: dbChore
       });
     });
   });
