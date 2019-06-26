@@ -2,6 +2,7 @@
 var $choreTitle = $("#chore-title");
 var $choreDescription = $("#chore-description");
 var $chorePoints = $("#chore-points");
+var $choreCompleted = $("#chore-completed");
 var $submitBtn = $("#submit");
 var $choreList = $("#chore-list");
 

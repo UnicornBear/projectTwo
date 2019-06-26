@@ -9,7 +9,7 @@ module.exports = function(app) {
   });
 
   // Create a new example
-  app.post("/api/chores", function(req, res) {
+  app.post("/api/chores", function(req, res) { 
     db.Chore.create(req.body).then(function(dbChore) {
       res.json(dbChore);
     });
