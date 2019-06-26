@@ -1,49 +1,55 @@
 // Get references to page elements
-var $exampleText = $("#example-text");
-var $exampleDescription = $("#example-description");
+var $choreTitle = $("#chore-title");
+var $choreDescription = $("#chore-description");
+var $chorePoints = $("#chore-points");
 var $submitBtn = $("#submit");
-var $exampleList = $("#example-list");
+var $choreList = $("#chore-list");
 
 // The API object contains methods for each kind of request we'll make
 var API = {
-  saveExample: function(example) {
+  saveChore: function(chore) {
     return $.ajax({
       headers: {
         "Content-Type": "application/json"
       },
       type: "POST",
-      url: "api/examples",
-      data: JSON.stringify(example)
+      url: "api/chores",
+      data: JSON.stringify(chore)
     });
   },
-  getExamples: function() {
+  getChores: function() {
     return $.ajax({
-      url: "api/examples",
+      url: "api/chores",
       type: "GET"
     });
   },
-  deleteExample: function(id) {
+  deleteChore: function(id) {
     return $.ajax({
-      url: "api/examples/" + id,
+      url: "api/chores/" + id,
       type: "DELETE"
     });
   }
 };
 
 // refreshExamples gets new examples from the db and repopulates the list
-var refreshExamples = function() {
-  API.getExamples().then(function(data) {
-    var $examples = data.map(function(example) {
+var refreshChores = function() {
+  API.getChores().then(function(data) {
+    var $chores = data.map(function(chore) {
       var $a = $("<a>")
-        .text(example.text)
-        .attr("href", "/example/" + example.id);
+        .text(chore.title)
+        .attr("href", "/chore/" + chore.id);
+
+      var $b = $("<a>")
+        .text(chore.points)
+        .attr("href", "/chore/" + chore.id);
 
       var $li = $("<li>")
         .attr({
           class: "list-group-item",
-          "data-id": example.id
+          "data-id": chore.id
         })
-        .append($a);
+        .append($a)
+        .append($b);
 
       var $button = $("<button>")
         .addClass("btn btn-danger float-right delete")
@@ -54,8 +60,8 @@ var refreshExamples = function() {
       return $li;
     });
 
-    $exampleList.empty();
-    $exampleList.append($examples);
+    $choreList.empty();
+    $choreList.append($chores);
   });
 };
 
@@ -64,22 +70,24 @@ var refreshExamples = function() {
 var handleFormSubmit = function(event) {
   event.preventDefault();
 
-  var example = {
-    text: $exampleText.val().trim(),
-    description: $exampleDescription.val().trim()
+  var chore = {
+    title: $choreTitle.val().trim(),
+    description: $choreDescription.val().trim(),
+    points: $chorePoints.val().trim()
   };
 
-  if (!(example.text && example.description)) {
-    alert("You must enter an example text and description!");
+  if (!(chore.title && chore.description && chore.points)) {
+    alert("You must enter a chore text, description and points!");
     return;
   }
 
-  API.saveExample(example).then(function() {
-    refreshExamples();
+  API.saveChore(chore).then(function() {
+    refreshChores();
   });
 
-  $exampleText.val("");
-  $exampleDescription.val("");
+  $choreTitle.val("");
+  $choreDescription.val("");
+  $chorePoints.val("");
 };
 
 // handleDeleteBtnClick is called when an example's delete button is clicked
@@ -89,11 +97,11 @@ var handleDeleteBtnClick = function() {
     .parent()
     .attr("data-id");
 
-  API.deleteExample(idToDelete).then(function() {
-    refreshExamples();
+  API.deleteChore(idToDelete).then(function() {
+    refreshChores();
   });
 };
 
 // Add event listeners to the submit and delete buttons
 $submitBtn.on("click", handleFormSubmit);
-$exampleList.on("click", ".delete", handleDeleteBtnClick);
+$choreList.on("click", ".delete", handleDeleteBtnClick);
