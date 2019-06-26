@@ -1,33 +1,47 @@
-var express = require('express');
-var bodyParser = require('body-parser');
-var methodOverride = require('method-override');
+require("dotenv").config();
+var express = require("express");
+var exphbs = require("express-handlebars");
 
-var Sequelize = require('sequelize');
-
-//connection to the MySQL database
-var connection = require('./config/connection.js');
+var db = require("./models");
 
 var app = express();
+var PORT = process.env.PORT || 3000;
 
-// Serve static content for the app from the "public" directory in the application directory.
-app.use(express.static(process.cwd() + '/public'));
+// Middleware
+app.use(express.urlencoded({ extended: false }));
+app.use(express.json());
+app.use(express.static("public"));
 
-app.use(bodyParser.urlencoded({  extended: false  }));
+// Handlebars
+app.engine(
+  "handlebars",
+  exphbs({
+    defaultLayout: "main"
+  })
+);
+app.set("view engine", "handlebars");
 
-// override with POST having ?_method=DELETE
-app.use(methodOverride('_method'));
+// Routes
+require("./routes/apiRoutes")(app);
+require("./routes/htmlRoutes")(app);
 
-var exphbs = require('express-handlebars');
+var syncOptions = { force: false };
 
-app.engine('handlebars', exphbs({  defaultLayout: 'main'  }));
-app.set('view engine', 'handlebars');
+// If running a test, set syncOptions.force to true
+// clearing the `testdb`
+if (process.env.NODE_ENV === "test") {
+  syncOptions.force = true;
+}
 
-// set userroute to 'controller.js'  --  need to update if set as something else
-var userRoutes = require('./controllers/controller.js');
-
-app.use('/', userRoutes);
-
-var port = process.env.PORT || 3000;
-app.listen(port, function(){
-  console.log('Listening on PORT ' + port);
+// Starting the server, syncing our models ------------------------------------/
+db.sequelize.sync(syncOptions).then(function() {
+  app.listen(PORT, function() {
+    console.log(
+      "==> 🌎  Listening on port %s. Visit http://localhost:%s/ in your browser.",
+      PORT,
+      PORT
+    );
+  });
 });
+
+module.exports = app;
