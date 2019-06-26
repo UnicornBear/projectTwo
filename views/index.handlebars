@@ -24,7 +24,7 @@
 
       <div class="col s6">
         {{#each chores}}
-          {{#unless this.completed}}
+          {{#unless this.chore_completed}}
             <div class="row">
               <div class="choreName">
                   <div class='choreAvailable'>{{this.chore_name}}</div>
@@ -44,7 +44,7 @@
       
       <div class="col s6">
         {{#each chores}}
-          {{#if this.completed}}
+          {{#if this.chore_completed}}
             <div class='choreCompleted'>
               <div>
                 {{this.chore_name}} devoured by {{this.User.name}}
