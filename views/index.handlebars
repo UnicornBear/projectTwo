@@ -1,5 +1,6 @@
 <div id="home">
   <div class="container">
+    
     <div class="row">
       <div class="col-8 offset-2">
         <h1>{{msg}}</h1>
@@ -15,17 +16,47 @@
           </div>
           <button id="submit" class="btn btn-primary float-right">Submit</button>
         </form>
-        <h3>Examples:</h3>
-        <ul id="example-list" class="list-group">
-          {{#each examples}}
-          <li data-id="{{this.id}}" class="list-group-item">
-            <a href="example/{{this.id}}">{{this.text}}</a>
-            <button class="btn btn-danger float-right delete">ｘ</button>
-          </li>
-          {{/each}}
-        </ul>
       </div>
     </div>
+
+
+    <div class="row">
+
+      <div class="col s6">
+        {{#each chores}}
+          {{#unless this.completed}}
+            <div class="row">
+              <div class="choreName">
+                  <div class='choreAvailable'>{{this.chore_name}}</div>
+              </div>
+
+              <div class="choreTodo">
+                <form action="/chores/{{this.id}}?_method=PUT" method="POST">
+                  <input type="text" id="userName" name="userName" placeholder="Your Name">
+                  <button type="submit" class="waves-effect waves-light btn"> Devour</button>
+                </form>
+              </div>
+            </div>
+          {{/unless}}
+        {{/each}}
+      </div> 
+      
+      
+      <div class="col s6">
+        {{#each chores}}
+          {{#if this.completed}}
+            <div class='choreCompleted'>
+              <div>
+                {{this.chore_name}} devoured by {{this.User.name}}
+              </div>
+            </div>
+          {{/if}}
+        {{/each}}
+      </div>
+    </div>
+
+
+
   </div>
 </div>
 
