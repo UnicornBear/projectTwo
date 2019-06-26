@@ -23,12 +23,31 @@
           <li data-id="{{this.id}}" class="list-group-item">
             <a href="chore/{{this.id}}">{{this.title}}</a>
             <a href="chore/{{this.id}}">{{this.points}}</a>
+                <form action="/chores/{{this.id}}?_method=PUT" method="POST">
+                  <input type="text" id="userName" name="userName" placeholder="Your Name">
+                  <button type="submit" class="waves-effect waves-light btn"> Devour</button>
+                </form>
             <button class="btn btn-danger float-right delete">ｘ</button>
           </li>
           {{/each}}
         </ul>
       </div>
     </div>
+
+      <div class="col s6">
+        {{#each chores}}
+          {{#unless this.completed}}
+            <div class="row">
+              <div class="choreName">
+                  <div class='choreAvailable'>{{this.title}}</div>
+              </div>
+
+            </div>
+          {{/unless}}
+        {{/each}}
+      </div> 
+
+
   </div>
 </div>
 
