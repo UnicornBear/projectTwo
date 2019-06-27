@@ -17,7 +17,7 @@ module.exports = function(app) {
         chores: data
       };
       console.log(hbsObject);
-      res.render('index', hbsObject);
+      res.render("index", hbsObject);
     })
     .catch(function(err) {
       log.error("ERR = " + err);
@@ -31,10 +31,17 @@ module.exports = function(app) {
       db.Chore.findOne({ 
         where: { id: req.params.id }
       })
-      .then(function(dbPopup) {
-        res.render("popup", {
-          popup: dbPopup
-        });
+      .then(function(data) {
+        log.debug("data = " + JSON.stringify(data));
+
+        var hbsPopup = {
+          popup: data
+        };
+        res.render("popup", hbsPopup);
+      })
+      .catch(function(err) {
+        log.error("ERR = " + err);
+        res.json({status: "ERROR", message: err});
       });
     });
 
