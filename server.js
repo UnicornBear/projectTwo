@@ -1,47 +1,42 @@
-require("dotenv").config();
-var express = require("express");
-var exphbs = require("express-handlebars");
+var express = require('express');
+var bodyParser = require('body-parser');
+var methodOverride = require('method-override');
+var exphbs = require('express-handlebars');
+var log = require("loglevel");
+var path = require("path");
 
-var db = require("./models");
+// console.log('process.env.NODE_ENV (in server.js) = ' + process.env.NODE_ENV);
+
+// if (process.env.NODE_ENV) { 
+// 	console.log("Setting log level to ERROR");
+// 	log.setLevel("ERROR");
+// } else { 
+// 	var level = process.env.LOG_LEVEL || "DEBUG";
+// 	console.log("Setting log level to " + level);
+// 	log.setLevel(level);
+// }
 
 var app = express();
-var PORT = process.env.PORT || 3000;
+var port = process.env.PORT || 3000;
 
-// Middleware
-app.use(express.urlencoded({ extended: false }));
-app.use(express.json());
-app.use(express.static("public"));
+var db = require(path.join(__dirname, '/models'));
 
-// Handlebars
-app.engine(
-  "handlebars",
-  exphbs({
-    defaultLayout: "main"
-  })
-);
-app.set("view engine", "handlebars");
+app.use(express.static(process.cwd() + '/public'));
 
-// Routes
-require("./routes/apiRoutes")(app);
-require("./routes/htmlRoutes")(app);
+app.use(methodOverride('_method'));
 
-var syncOptions = { force: false };
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.text());
+app.use(bodyParser.json({ type: "application/vnd.api+json" }));
 
-// If running a test, set syncOptions.force to true
-// clearing the `testdb`
-if (process.env.NODE_ENV === "test") {
-  syncOptions.force = true;
-}
+app.engine('handlebars', exphbs({ defaultLayout: 'main' }));
+app.set('view engine', 'handlebars');
 
-// Starting the server, syncing our models ------------------------------------/
-db.sequelize.sync(syncOptions).then(function() {
-  app.listen(PORT, function() {
-    console.log(
-      "==> 🌎  Listening on port %s. Visit http://localhost:%s/ in your browser.",
-      PORT,
-      PORT
-    );
+require('./controllers/chores_controller.js')(app);
+
+db.sequelize.sync().then(function() {
+    app.listen(port, function() {
+      console.log("Burger Enjoyment at Port: " + port);
+    });
   });
-});
-
-module.exports = app;

@@ -4,15 +4,16 @@
     "password": "1Password!324",
     "database": "chores_db",
     "host": "localhost",
+    "port": 3306,
     "dialect": "mysql"
   },
   "test": {
     "username": "root",
-    "password": null,
-    "database": "testdb",
+    "password": "1Password!324",
+    "database": "chores_db",
     "host": "localhost",
-    "dialect": "mysql",
-    "logging": false
+    "port": 3306,
+    "dialect": "mysql"
   },
   "production": {
     "use_env_variable": "JAWSDB_URL",

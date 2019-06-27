@@ -9,13 +9,19 @@ USE chores_db;
 
 DROP TABLE IF EXISTS chore;
 
-CREATE TABLE chore
+CREATE TABLE chores
 (
 	id INT NOT NULL AUTO_INCREMENT,
-    chore_name varchar(255) NOT NULL,
-    chore_completed BOOLEAN DEFAULT false,
-    CreatedAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    UpdatedAt DATETIME DEFAULT CURRENT_TIMESTAMP,
+    title varchar(255) NOT NULL,
+    description TEXT,
+    points INT NOT NULL,
+    completed  BOOLEAN DEFAULT false,
+    createdAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP ,
+    updatedAt DATETIME DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP ,
     UserId INT,
     PRIMARY KEY(id)
 );
+
+INSERT INTO chores (title, description, points, completed) VALUES ('Clean the guest bedroom', "tree", 10, 0);
+INSERT INTO chores (title, description, points, completed) VALUES ('Organize the basement toy closet', "tree", 10,  0);
+
