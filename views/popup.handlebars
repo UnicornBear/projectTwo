@@ -4,16 +4,21 @@
       <div class="card mt-4">
         <div class="card-body">
           <h5 class="card-title">CHORE  </h5>
+      {{#each popup}}
+      {{#if this.id}}
           <p>
-            <strong>ID</strong>: {{chore.id}}</p>
+            <strong>ID</strong>: {{this.id}}</p>
           <p>
-            <strong>Name</strong>: {{chore.chore_name}}</p>
+            <strong>Name</strong>: {{this.chore_name}}</p>
           <p>
-            <strong>Instructions</strong>: {{chore.instructions}}</p>
+            <strong>Instructions</strong>: {{this.instructions}}</p>
           <p>
-            <strong>Points</strong> {{chore.points}}</p>
+            <strong>Points</strong> {{this.points}}</p>
+        {{/if}}
+        {{/each}}
 
             <a href="/">← Back To Home</a>
+
         </div>
       </div>
     </div>
