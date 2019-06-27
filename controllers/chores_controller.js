@@ -50,7 +50,7 @@ module.exports = function(app) {
     log.debug("___ENTER POST /chores__");
 
     db.Chore.create(req.body)
-    .then(function(chore) {
+    .then(function() {
       res.redirect("/");
     })
     .catch(function(err) {
@@ -66,7 +66,6 @@ module.exports = function(app) {
     log.debug("id = " + req.params.id);
     log.debug("customer = " + JSON.stringify(req.body.userName));
 
-    var choreID = req.params.id;
     var userName = req.body.userName; 
 
     db.User.findAll({
