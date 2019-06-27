@@ -1,21 +1,21 @@
 {
-  "name": "burgerSequel",
+  "name": "projectTwo",
   "version": "1.0.0",
-  "description": "Digital Bruger eating app the is now sequelized",
+  "description": "A Family Chore Tacking application with points to reward completion of to-do list",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/UnicornBear/burgerSequel.git"
+    "url": "https://github.com/UnicornBear/projectTwo.git"
   },
-  "author": "Justin T Bregenzer",
+  "author": "Nena Gardner, Jim Gallagher, Justin T Bregenzer",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/UnicornBear/burgerSequel/issues"
+    "url": "https://github.com/UnicornBear/projectTwo/issues"
   },
-  "homepage": "https://github.com/UnicornBear/burgerSequelr#readme",
+  "homepage": "https://github.com/UnicornBear/projectTwor#readme",
   "dependencies": {
     "body-parser": "^1.17.1",
     "express": "^4.15.2",
