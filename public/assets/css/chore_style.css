@@ -11,15 +11,6 @@ body {
     background-color: white;
 }
 
-#cute_burger {
-    display: block;
-    margin: auto;
-}
-
-img {
-    background-color: black;
-}
-
 h1 {
     text-align: center;
     font-family: 'Fontdiner Swanky', cursive;
@@ -27,8 +18,7 @@ h1 {
     margin: 50px;
 }
 
-.burgerAvailable {
-    font-family: 'Crafty Girls', cursive;
+.choreAvailable {
     font-weight: normal;
     font-size: 20px;
     text-align: center;
@@ -41,7 +31,7 @@ h1 {
     border: none;
 }
 
-.burgerAvailable:hover {
+.choreAvailable:hover {
     background-color: greenyellow;
 }
 
@@ -68,7 +58,7 @@ h2 {
     background-color: lightslategray;
 }
 
-.addBurgerButton {
+.addChoreButton {
     font-family: 'Crafty Girls', cursive;
     font-weight: normal;
     font-size: 20px;
@@ -81,11 +71,11 @@ h2 {
     border: none;
 }
 
-.addBurgerButton:active {
+.addChoreButton:active {
    background-color: #lightslategray;
 }
 
-.burgerFooter {
+.ChoreFooter {
    background-color: #lightslategray;
    padding: 20px 0;
 }
