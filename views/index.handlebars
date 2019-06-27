@@ -1,55 +1,61 @@
-<div id="home">
-  <div class="container">
-    <div class="row">
-      <div class="col-8 offset-2">
-        <h1>{{msg}}</h1>
-        <h2>Family Chore List!</h2>
-        <form class="clearfix mb-4" action="POST">
-          <div class="form-group">
-            <label for="chore-title">Type in Chore to be Completed</label>
-            <input type="text" id="chore-title" class="form-control" aria-describedby="chore-title" placeholder="enter in the chore">
-          </div>
-          <div class="form-group">
-            <label for="chore-description">What all needs to be Completed</label>
-              <textarea class="form-control" id="chore-description" aria-describedby="chore-description" placeholder="type chore in detail"></textarea>
-            <label for="chore-points">How many points for completion</label>
-              <textarea class="form-control" id="chore-points" aria-describedby="chore-points" placeholder="how many points"></textarea>
-          </div>
-          <button id="submit" class="btn btn-primary float-right">Submit</button>
-        </form>
-        <h3>Chores:</h3>
-        <ul id="chore-list" clas  s="list-group">
-          {{#each chores}}
-          <li data-id="{{this.id}}" class="list-group-item">
-            <a href="chore/{{this.id}}">{{this.title}}</a>
-            <a href="chore/{{this.id}}">{{this.points}}</a>
-                <form action="/chores/{{this.id}}?_method=PUT" method="POST">
-                  <input type="text" id="userName" name="userName" placeholder="Your Name">
-                  <button type="submit" class="waves-effect waves-light btn"> Devour</button>
-                </form>
-            <button class="btn btn-danger float-right delete">ｘ</button>
-          </li>
-          {{/each}}
-        </ul>
-      </div>
-    </div>
+<h1> Devour the Sequelized Digital Burger</h1>
 
-      <div class="col s6">
-        {{#each chores}}
-          {{#unless this.completed}}
-            <div class="row">
-              <div class="choreName">
-                  <div class='choreAvailable'>{{this.title}}</div>
-              </div>
+<main>
 
-            </div>
-          {{/unless}}
-        {{/each}}
-      </div> 
+  
+<h2>Chores Chores Chores, I love Chores</h2>
 
+<div class="row">
+  <div class="col s12">
+    <form action="/chores" method="POST">
+      <input type="text" id="name" name="chore_name" placeholder="Chore Name">
 
+      <input type="text" id="instructions" name="chore_instructions" placeholder="Instructions">
+
+      <input type="text" id="points" name="chore_points" placeholder="Points">
+
+      <button type="submit" class="addChoreButton">enter the chore instructions</button>
+
+    </form>
   </div>
 </div>
 
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script src="/js/index.js"></script>
+<div class="row">
+  <div class="col s12">
+       <h3>Chores:</h3>
+               <ul id="example-list" class="list-group">
+        {{#each chores}}
+          {{#unless this.completed}}
+          <li data-id="{{this.id}}" class="list-group-item">
+            <a href="popup/{{this.id}}">{{this.chore_name}}</a>
+                <form action="/chores/{{this.id}}?_method=PUT" method="POST">
+                  <input type="text" id="userName" name="userName" placeholder="Your Name">
+                  <button type="submit" class="waves-effect waves-light btn"> complete</button>
+                </form> </li>
+           {{/unless}}
+        {{/each}}
+        </ul>
+  </div>
+</div>
+
+  <div class="container">
+    <div class="row">
+
+   
+      
+      <div class="col s12">
+        {{#each chores}}
+          {{#if this.completed}}
+            <div class='burgerEaten'>
+              <div>
+                {{this.chore_name}} completed by {{this.User.name}}
+              </div>
+            </div>
+          {{/if}}
+        {{/each}}
+      </div>
+    </div>
+  </div> 
+
+</main>
+
