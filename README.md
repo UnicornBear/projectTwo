@@ -1,5 +1,11 @@
+
+# Chores App
+
+The Sequelized sequel to the Chores  app
+
 # Minion Family Chore War Application
 This is an application for a family or room mates to make doing chores and keeping the place clean fun.  Enter Chore Wars and now you are pinged against one another for doing chores.  Who gains the most points, wins the Chore War.  Do you have what it takes to complete more then your family member and earn from them a prize...?
+
 
 <p>A full stack, MVC (Model-View-Controller) application that allows you to ???.</p>
 <img src="">
