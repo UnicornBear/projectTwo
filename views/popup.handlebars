@@ -5,7 +5,7 @@
         <div class="card-body">
           <div class="card-title">CHORE  </div>
       {{#each popup}}
-
+      {{#if this.id}}
           <p>
             <strong>ID</strong>: {{this.id}}</p>
           <p>
@@ -14,7 +14,7 @@
             <strong>Instructions</strong>: {{this.instructions}}</p>
           <p>
             <strong>Points</strong> {{this.points}}</p>
-
+        {{/if}}
         {{/each}}
 
             <a href="/">← Back To Home</a>
