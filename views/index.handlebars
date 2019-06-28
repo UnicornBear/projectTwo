@@ -6,9 +6,9 @@
     <form action="/chores" method="POST">
       <input type="text" id="name" name="chore_name" placeholder="Chore Name">
 
-      <input type="text" id="instructions" name="chore_instructions" placeholder="Instructions">
+      <input type="text" id="instructions" name="instructions" placeholder="Instructions">
 
-      <input type="text" id="points" name="chore_points" placeholder="Points">
+      <input type="text" id="points" name="points" placeholder="Points">
 
       <button type="submit" class="addChoreButton">enter the chore instructions</button>
 
@@ -42,7 +42,7 @@
       <div class="col s12">
         {{#each chores}}
           {{#if this.completed}}
-            <div class='burgerEaten'>
+            <div class='chore-completed'>
               <div>
                 {{this.chore_name}} completed by {{this.User.name}} for {{this.points}} points
               </div>

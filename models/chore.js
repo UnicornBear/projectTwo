@@ -8,7 +8,7 @@ module.exports = function(sequelize, DataTypes) {
         },
         instructions: {
           type: DataTypes.STRING,
-          allowNull: true
+          allowNull: false
         },
         completed: {
           type: DataTypes.BOOLEAN,

@@ -1,9 +1,17 @@
+
 # Chores App
 
 The Sequelized sequel to the Chores  app
 
+# Minion Family Chore War Application
+This is an application for a family or room mates to make doing chores and keeping the place clean fun.  Enter Chore Wars and now you are pinged against one another for doing chores.  Who gains the most points, wins the Chore War.  Do you have what it takes to complete more then your family member and earn from them a prize...?
+
+
 <p>A full stack, MVC (Model-View-Controller) application that allows you to ???.</p>
 <img src="">
+
+## Developers
+ Jim Gallagher, Nena Gardner, Justin Bregenzer
 
 ## Table of contents
   * [Live](#live)
@@ -19,7 +27,7 @@ The Sequelized sequel to the Chores  app
   * [Issues](#Issues)
 
 ## <a name="live"></a>Live
-*WIP* enter the heroku released site app here
+   enter the heroku released app here https://projecttwo072019.herokuapp.com
 
 ## <a name="about-this-project"></a> About this project
 
@@ -68,8 +76,8 @@ To set up this application locally on your computer, perform the following steps
 ### <a name="clone-repository"></a> 1. Clone the repository
 The first step is to clone the project repository to a local directory on your computer. To clone the repository, run the following commands:
 <pre>
-  git clone ***************************
-  cd *****************
+  git clone git@github.com:UnicornBear/projectTwo.git
+  cd pprojectTwo
 </pre>
 
 ## <a name="screenshots"></a> Screenshots

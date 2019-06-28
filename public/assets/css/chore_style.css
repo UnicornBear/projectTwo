@@ -13,7 +13,6 @@ body {
 
 h1 {
     text-align: center;
-    font-family: 'Fontdiner Swanky', cursive;
     font-size: 65px;
     margin: 50px;
 }
@@ -35,13 +34,12 @@ h1 {
     background-color: greenyellow;
 }
 
-.burgerEaten {
-    font-family: 'Crafty Girls', cursive;
+.chore-completed {
     font-weight: normal;
     font-size: 20px;
     text-align: center;
-
     border-radius: 25px;
+    width: 100%;
     margin: 10px;
     padding: 10px;
     background-color: lightslategray;
@@ -49,7 +47,6 @@ h1 {
 
 h2 {
     text-align: center;
-    font-family: 'Fontdiner Swanky', cursive;
     font-size: 40px;
     margin: 50px;
 }
@@ -59,7 +56,6 @@ h2 {
 }
 
 .addChoreButton {
-    font-family: 'Crafty Girls', cursive;
     font-weight: normal;
     font-size: 20px;
     text-align: center;
@@ -80,7 +76,9 @@ h2 {
    padding: 20px 0;
 }
 
+
 .card-panel grey lighten-5 z-depth-1 {
     background-color: #ffff00 yellow accent-2;
     padding: 20px 0;
 }
+
