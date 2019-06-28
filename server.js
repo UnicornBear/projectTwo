@@ -37,6 +37,6 @@ require('./controllers/chores_controller.js')(app);
 
 db.sequelize.sync().then(function() {
     app.listen(port, function() {
-      console.log("Burger Enjoyment at Port: " + port);
+      console.log("Start your chores at Port: " + port);
     });
   });

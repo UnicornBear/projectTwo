@@ -1,5 +1,6 @@
-# burgerSequel
-The Sequelized sequel to the Digital Burger Eating app
+# Chores App
+
+The Sequelized sequel to the Chores  app
 
 <p>A full stack, MVC (Model-View-Controller) application that allows you to ???.</p>
 <img src="">
