@@ -3,19 +3,19 @@
     <div class="col-8 offset-2">
       <div class="card mt-4">
         <div class="card-body">
-          <div class="card-title">CHORE  </div>
-      {{#each popup}}
-      {{#if this.id}}
+          <h1 class="card-title">CHORE  </h1>
+      {{!-- {{#each popup}}
+      {{#if this.id}} --}}
           <p>
-            <strong>ID</strong>: {{this.id}}</p>
+            <strong>ID</strong>: {{popup.id}}</p>
           <p>
-            <strong>Name</strong>: {{this.chore_name}}</p>
+            <strong>Name</strong>: {{popup.chore_name}}</p>
           <p>
-            <strong>Instructions</strong>: {{this.instructions}}</p>
+            <strong>Instructions</strong>: {{popup.instructions}}</p>
           <p>
-            <strong>Points</strong> {{this.points}}</p>
-        {{/if}}
-        {{/each}}
+            <strong>Points</strong> {{popup.points}}</p>
+        {{!-- {{/if}}
+        {{/each}} --}}
 
             <a href="/">← Back To Home</a>
 

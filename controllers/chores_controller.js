@@ -34,10 +34,10 @@ module.exports = function(app) {
       .then(function(data) {
         log.debug("data = " + JSON.stringify(data));
 
-        var hbsPopup = {
-          popup: data
-        };
-        res.render("popup", hbsPopup);
+        // var hbsPopup = {
+        //   popup: data
+        // };
+        res.render("popup", { popup: data});
       })
       .catch(function(err) {
         log.error("ERR = " + err);
