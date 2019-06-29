@@ -56,19 +56,28 @@ h2 {
 }
 
 .addChoreButton {
-    font-weight: normal;
+    /* font-weight: normal; */
     font-size: 20px;
     text-align: center;
     border-radius: 25px;
     width: 100%;
     margin: 0;
-    padding: 10px;
-    background-color: #lightslategray;
-    border: none;
+    /* padding: 10px; */
+    background-color: black;
+    color: yellow;
 }
 
-.addChoreButton:active {
-   background-color: #lightslategray;
+/* .addChoreButton:active {
+   background-color: lightgrey;
+   color: black;
+} */
+
+.completeChoreButton {
+    font-size: 15px;
+    border-radius: 25px;
+    /* width: 150px; */
+    background-color: black;
+    color: yellow;
 }
 
 .ChoreFooter {
@@ -77,8 +86,17 @@ h2 {
 }
 
 
-.card-panel grey lighten-5 z-depth-1 {
+/* .card-panel  {
     background-color: #ffff00 yellow accent-2;
     padding: 20px 0;
-}
+} */
 
+/* logic below helps limit card count per row, and repeat rows within the class */
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    }
+    
+.row > div[class*='col-'] {
+    display: flex;
+}
