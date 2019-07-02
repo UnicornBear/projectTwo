@@ -105,3 +105,10 @@ h4{
     font-family: "Aclonica", serif;
     text-shadow: 4px 4px 4px #aaa;
 }
+
+.topright {
+    position: absolute;
+    top: 8px;
+    right: 16px;
+    font-size: 18px;
+}
