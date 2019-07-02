@@ -11,6 +11,10 @@ body {
     background-color: white;
 }
 
+a {
+    font-size: 30px;
+}
+
 h1 {
     text-align: center;
     font-size: 65px;
