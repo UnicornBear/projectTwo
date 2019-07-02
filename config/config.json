@@ -1,7 +1,7 @@
 {
   "development": {
     "username": "root",
-    "password": "1Password!324",
+    "password": "root",
     "database": "chores_db",
     "host": "localhost",
     "port": 3306,
