@@ -12,6 +12,10 @@ body {
     background-color: white;
 }
 
+a {
+    font-size: 30px;
+}
+
 h1 {
     text-align: center;
     font-size: 65px;
@@ -105,4 +109,12 @@ h2 {
 h4{
     font-family: "Aclonica", serif;
     text-shadow: 4px 4px 4px #aaa;
+}
+
+.topright {
+    position: absolute;
+    top: 8px;
+    right: 16px;
+    font-size: 18px;
+
 }
