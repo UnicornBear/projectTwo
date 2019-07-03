@@ -1,6 +1,6 @@
 var db = require("../models");
 var log = require("loglevel").getLogger("chores_controller");
-
+0
 module.exports = function(app) {
 
   app.get("/", function(req, res) {
@@ -38,7 +38,7 @@ module.exports = function(app) {
 
 
   app.post("/chores", function(req, res) {
-    log.debug("___ENTER POST /chores__");
+    log.debug("___ENTER POST /chores__"); 
 
     db.Chore.create(req.body)
     .then(function(chore) {
@@ -51,6 +51,19 @@ module.exports = function(app) {
   });
 
 
+  // destory the chore
+  app.delete("/delete/:id", function(req, res){
+    db.Chore.destroy({
+      where:{
+        id: [req.params.id]
+      }
+    })
+    res.redirect('/');
+  });
+
+
+
+
   app.put("/chores/:id", function(req, res) {
     log.debug("___ENTER PUT /chores:id___");
 
@@ -59,6 +72,7 @@ module.exports = function(app) {
 
     var choreID = req.params.id;
     var userName = req.body.userName; 
+    // var check = req.user.points;
 
     db.User.findAll({
       where: {
@@ -79,7 +93,8 @@ module.exports = function(app) {
           db.Chore.update(
             {
               completed: true,
-              UserId: newUser.id
+              UserId: newUser.id,
+              pointTotal:  15
             },
             {
               where: {
@@ -105,7 +120,8 @@ module.exports = function(app) {
         db.Chore.update(
           {
             completed: true,
-            UserId: user[0].id
+            UserId: user[0].id,
+            pointTotal:  15
           },
           {
             where: {
