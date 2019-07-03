@@ -1,9 +1,5 @@
 <main>
 
-
-
-
-
   <div class="row">
     {{#each chores}}
     {{#unless this.completed}}
@@ -31,24 +27,26 @@
   </div>
 
 
-  <div class="container">
-    <div class="row">
+  <!-- Lower modal to show all completed chores -->
+  <a class="waves-effect waves-light btn modal-trigger" href="#modal3">See All Completed Chores!</a>
 
-   
-      
-      <div class="col s12">
-        {{#each chores}}
+  <!-- Lower modal structure -->
+  <div id="modal3" class="modal bottom-sheet">
+    <div class="modal-content">
+      {{#each chores}}
           {{#if this.completed}}
             <div class='chore-completed'>
               <div>
-                {{this.chore_name}} completed by {{this.User.name}} for {{this.points}} points
+                {{this.chore_name}} completed by {{this.User.name}} for {{this.points}} points!
               </div>
             </div>
           {{/if}}
         {{/each}}
-      </div>
     </div>
-  </div> 
+    <div class="modal-footer">
+      <a href="#!" class="modal-close waves-effect waves-green btn-flat">Close</a>
+    </div>
+  </div>
 
 </main>
 
