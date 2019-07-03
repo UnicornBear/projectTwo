@@ -2,18 +2,19 @@
 <html lang="en">
 
 <head>
-	
+
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<title>Do DA CHORES</title>
 
 	<!-- JQuery -->
-	<script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>	
+	<script src="https://code.jquery.com/jquery-3.4.1.js"
+		integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
 	<!-- Compiled and minified CSS -->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Aclonica">
-	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 	<!-- Compiled and minified JavaScript -->
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 	<!-- CSS -->
@@ -24,34 +25,98 @@
 <body>
 	{{!-- <img src="" width="400px" id="cute_burger"> --}}
 	<div class="col s12 m8 offset-m2 l6 offset-l3">
-        <div class="card-panel yellow lighten z-depth-1">
-          	<div class="row">
+		<div class="card-panel yellow lighten z-depth-1">
+			<div class="row">
 				<div class="col m12">
-				<span class="black-text">  
-					<h4 class="center-align">Chores, Chores, Chores, I love Chores!</h4>
-					<h4 class="center-align">a kept em in-line family chore application</h4><br>
-					<h5></h5>
-				</span>
-				<div class="col m6">
-				<img src="images/min1.jpg" alt="minion-maid" class="circle left responsive-img"> <!-- notice the "circle" class -->
-				</div>
+					<span class="black-text">
+						<h4 class="center-align">Chores, Chores, Chores, I love Chores!</h4>
+						<h4 class="center-align">a kept em in-line family chore application</h4><br>
+						<h5></h5>
+					</span>
+					<div class="col m6">
+						<img src="images/min1.jpg" alt="minion-maid" class="circle left responsive-img">
+						<!-- notice the "circle" class -->
+					</div>
 					<h6><b>Step 1: Add a chore, instructions and points for completing the task.</b></h6><br>
-					<h6><b>Step 2: Parents can assign the kids a task or kids can select a chore they want to complete by adding their name then click complete to track points.</b></h6><br>
+					<h6><b>Step 2: Parents can assign the kids a task or kids can select a chore they want to complete
+							by adding their name then click complete to track points.</b></h6><br>
 				</div>
-          </div>
-        </div>
-    </div>
-<hr>
-	{{{ body }}}
+			</div>
 
-	<footer class="choreFooter">
-		<div class="footer-copyright">
-			<div class="container">
-				<span class="grey-text">© 2019</span>
-				<a class="grey-text right" href="https://github.com/UnicornBear/projectTwo">GitHub Repository</a>
+			<a class="waves-effect waves-light btn modal-trigger" href="#modal1">Create a Chore!</a>
+
+			<!-- Modal Structure -->
+			<div id="modal1" class="modal">
+				<div class="modal-content">
+					<h1 class="card-title">CREATE A CHORE!</h1>
+					<form action="/chores" method="POST">
+						<input type="text" id="name" name="chore_name" placeholder="Chore Name">
+
+						<input type="text" id="instructions" name="instructions" placeholder="Instructions">
+
+						<input type="text" id="points" name="points" placeholder="Points">
+
+						<button type="submit" class="addChoreButton btn waves-effect waves-light">Submit your Chore!</button>
+
+					</form>
+					<div class="modal-footer">
+						<a href="#!" class="modal-close waves-effect waves-green btn-flat">Close</a>
+					</div>
+				</div>
+			</div>
+
+
+			<br>
+
+			<a class="waves-effect waves-light btn modal-trigger" href="#modal2">Create a Minion!</a>
+
+			<!-- Modal Structure -->
+			<div id="modal2" class="modal">
+				<div class="modal-content">
+					<h1 class="card-title">CREATE A MINION!</h1>
+					<form action="/user" method="POST">
+						<input type="text" id="userName" name="user_name" placeholder="User Name">
+
+						<input type="text" id="userDescription" name="user_description" placeholder="User Description">
+
+						<!--<input type="text" id="points" name="points" placeholder="Points">  ADD A USER IMAGE HERE?? -->
+
+						<button type="submit" class="addChoreButton btn waves-effect waves-light">Submit your Minion!</button>
+
+					</form>
+				</div>
+				<div class="modal-footer">
+					<a href="#!" class="modal-close waves-effect waves-green btn-flat">Close</a>
+				</div>
+			</div>
+
+
+
+
+
 			</div>
 		</div>
-	</footer>
+		<hr>
+		{{{ body }}}
+
+		<footer class="choreFooter">
+			<div class="footer-copyright">
+				<div class="container">
+					<span class="grey-text">© 2019</span>
+					<a class="grey-text right" href="https://github.com/UnicornBear/projectTwo">GitHub Repository</a>
+				</div>
+			</div>
+		</footer>
+
+
+		<script>
+
+			$(document).ready(function () {
+				$('.modal').modal();
+			});
+
+
+		</script>
 </body>
 
 </html>

@@ -1,20 +1,7 @@
 <main>
 
 
-<div class="row">
-  <div class="col s12">
-    <form action="/chores" method="POST">
-      <input type="text" id="name" name="chore_name" placeholder="Chore Name">
 
-      <input type="text" id="instructions" name="instructions" placeholder="Instructions">
-
-      <input type="text" id="points" name="points" placeholder="Points">
-
-      <button type="submit" class="addChoreButton btn waves-effect waves-light">enter the chore instructions</button>
-
-    </form>
-  </div>
-</div>
 
 
   <div class="row">
@@ -35,7 +22,7 @@
             <form action="/chores/{{this.id}}?_method=PUT" method="POST">
               <input type="text" id="userName" name="userName" placeholder="Your Name">
               <button type="submit" class="completeChoreButton btn waves-effect waves-light"> complete</button>
-            </form> </li> 
+            </form> 
           </div>
         </div>
       </div>
