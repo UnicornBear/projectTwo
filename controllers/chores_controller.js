@@ -71,8 +71,8 @@ module.exports = function(app) {
     log.debug("customer = " + JSON.stringify(req.body.userName));
 
     var choreID = req.params.id;
+    var chorePoints = req.params.points;
     var userName = req.body.userName; 
-    // var check = req.user.points;
 
     db.User.findAll({
       where: {
@@ -93,15 +93,25 @@ module.exports = function(app) {
           db.Chore.update(
             {
               completed: true,
-              UserId: newUser.id,
-              pointTotal:  15
+              UserId: newUser.id
             },
             {
               where: {
-                id: req.params.id
+                id: choreID
               }
             }
-          ).then(function(chore) {
+          ).then(function() {
+            db.User.update(
+              {
+                pointsTotal: 99
+              },
+              {
+                where: {
+                  name: newUser.name
+                }
+              }
+            )
+          }).then(function(chore) {
             res.redirect('/');
           })
           .catch(function (err) {
@@ -120,15 +130,25 @@ module.exports = function(app) {
         db.Chore.update(
           {
             completed: true,
-            UserId: user[0].id,
-            pointTotal:  15
+            UserId: user[0].id
           },
           {
             where: {
-              id: req.params.id
+              id: choreID
             }
           }
-        ).then(function(chore) {
+        ).then(function() {
+          db.User.update(
+            {
+              pointsTotal: 99
+            },
+            {
+              where: {
+                name: newUser.name
+              }
+            }
+          )
+        }).then(function(chore) {
           res.redirect('/');
         })
         .catch(function (err) {
