@@ -8,7 +8,7 @@ module.exports = function(sequelize, DataTypes) {
         pointsTotal: {
           type: DataTypes.STRING,
           defaultValue: 0
-        }
+        },
       }, {
         classMethods: {
           associate: function(models) {
