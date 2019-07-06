@@ -136,13 +136,60 @@ h4{
     top: 10%;
     left: 10%;
     /* transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%); */
-    /* background-color: #555; */
-    /* color: white;
-    font-size: 20px;
-    padding: 15px 30px;
-    border: none;
+    -ms-transform: translate(-50%, -50%);  */
+    /* background-color: #555;
+    /* color: white; */
+    /* font-size: 20px; */
+    padding: 0px;
+    /* border: none;
     cursor: pointer;
     border-radius: 5px; */
   }
- 
+
+  @media only screen and (min-width:500px) and (max-width:1200px) { 
+    .container {
+        position: relative;
+        /* width: 50%; */
+      }
+    
+    .container .btn {
+        position: absolute;
+        top: 10%;
+        left: 10%;
+        font-size: 12px;
+        padding: 0px;
+  }
+  @media only screen and (min-width:593px) and (max-width:1024px) { 
+    .container {
+        position: relative;
+        /* width: 50%; */
+      }
+    
+    .container .btn {
+        position: absolute;
+        top: 10%;
+        left: 10%;
+        font-size: 8px;
+        padding: 0px;
+  }
+  @media only screen and (min-width:593px) and (max-width:601px) { 
+    .container {
+        position: relative;
+        /* width: 50%; */
+      }
+    
+    .container .btn {
+        position: absolute;
+        top: 10%;
+        left: 10%;
+        font-size: 5px;
+        padding: 0px;
+  }
+
+}
+  @media only screen and (min-width:321px) and (max-width:480px) { }
+
+
+
+
+  
