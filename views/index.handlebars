@@ -14,7 +14,7 @@
             <a class="title3" href="popup/{{this.id}}">{{this.chore_name}}</a>
               <p>Chore ID: {{this.id}}</p>      
             <br>
-              <p>Chore Instructions: {{this.instructions}}</p>
+              <p class="title4">Chore Instructions: {{this.instructions}}</p>
           </div>
           <div class="card-action">
             <form action="/chores/{{this.id}}?_method=PUT" method="POST">
@@ -33,7 +33,7 @@
   <hr>
   <div class="row">
     <div class="col m12 center-align">
-  <a class="blue title4 waves-effect waves-light btn modal-trigger" href="#modal3">See All Completed Chores!</a>
+  <a class="blue title5 waves-effect waves-light btn modal-trigger" href="#modal3">See All Completed Chores!</a>
   </div>
   </div>
 
@@ -45,13 +45,18 @@
             <div class='blue chore-completed'>
               <div>
                 {{this.chore_name}} completed by {{this.User.name}} for {{this.points}} points!
+                  <form action="/delete/{{this.id}}?_method=DELETE" method="POST">
+                    <button type="submit" class="delete blue waves-effect waves-light btn-small"><i class="material-icons">clear</i></button>
+                  </form>
               </div>
             </div>
           {{/if}}
         {{/each}}
     </div>
     <div class="modal-footer">
-      <a href="#!" class="modal-close waves-effect waves-green btn-flat">Close</a>
+      <p class="center-align">
+        <a href="#!" class="modal-close waves-effect waves-green btn-flat">Close</a>
+      </p>  
     </div>
   </div>
 

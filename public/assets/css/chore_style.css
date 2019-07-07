@@ -13,7 +13,7 @@ body {
 }
 
 a {
-    font-size: 30px;
+    font-size: 15px;
 }
 
 h1 {
@@ -133,12 +133,16 @@ h4{
     font-size: 35px;
 }
 
+.title5{
+    font-family: 'Luckiest Guy', cursive;
+    font-size: 20px;
+}
+
 .topright {
     position: absolute;
     top: 8px;
     right: 16px;
     font-size: 18px;
-
 }
 
 .blue {
