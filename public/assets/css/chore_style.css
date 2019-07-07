@@ -40,8 +40,8 @@ h1 {
 }
 
 .chore-completed {
-    font-weight: normal;
-    font-size: 20px;
+    font-family: "Barriecito", sans-serif;
+    font-size: 2.5vh;
     text-align: center;
     border-radius: 25px;
     width: 100%;
@@ -120,17 +120,17 @@ h4{
 .title2{
     font-family: 'Luckiest Guy', cursive;
     text-shadow: 4px 4px 4px #aaa;
-    font-size: 50px;
+    font-size: 5vh;
 }
 
 .title3{
     font-family: 'Luckiest Guy', cursive;
-    font-size: 50px;
+    font-size: 4vh;
 }
 
 .title4{
     font-family: 'Luckiest Guy', cursive;
-    font-size: 35px;
+    font-size: 2.5vh;
 }
 
 .title5{
@@ -143,6 +143,10 @@ h4{
     top: 8px;
     right: 16px;
     font-size: 18px;
+}
+
+.italics {
+    font-style: italic
 }
 
 .blue {
