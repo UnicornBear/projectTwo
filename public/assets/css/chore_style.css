@@ -119,77 +119,10 @@ h4{
 
 }
 
-.container {
-    position: relative;
-    /* width: 50%; */
-  }
-  
-  /* Make the image responsive */
-  /* .container img {
-    width: 100%;
-    height: auto;
-  } */
-  
-  /* Style the button and place it in the middle of the container/image */
-  .container .btn {
-    position: absolute;
-    top: 10%;
-    left: 10%;
-    /* transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);  */
-    /* background-color: #555;
-    /* color: white; */
-    /* font-size: 20px; */
-    padding: 0px;
-    /* border: none;
-    cursor: pointer;
-    border-radius: 5px; */
+.blue {
+    background-color: #0d47a1;
+    color: white;
   }
 
-  @media only screen and (min-width:500px) and (max-width:1200px) { 
-    .container {
-        position: relative;
-        /* width: 50%; */
-      }
-    
-    .container .btn {
-        position: absolute;
-        top: 10%;
-        left: 10%;
-        font-size: 12px;
-        padding: 0px;
-  }
-  @media only screen and (min-width:593px) and (max-width:1024px) { 
-    .container {
-        position: relative;
-        /* width: 50%; */
-      }
-    
-    .container .btn {
-        position: absolute;
-        top: 10%;
-        left: 10%;
-        font-size: 8px;
-        padding: 0px;
-  }
-  @media only screen and (min-width:593px) and (max-width:601px) { 
-    .container {
-        position: relative;
-        /* width: 50%; */
-      }
-    
-    .container .btn {
-        position: absolute;
-        top: 10%;
-        left: 10%;
-        font-size: 5px;
-        padding: 0px;
-  }
 
-}
-  @media only screen and (min-width:321px) and (max-width:480px) { }
-
-
-
-
-  
+ 
