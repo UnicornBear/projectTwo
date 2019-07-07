@@ -26,10 +26,35 @@
 	<div class="col s12 m8 offset-m2 l6 offset-l3">
 		<div class="card-panel yellow lighten z-depth-1">
 			<div class="row">
+				<div class="col m6 right-align">
+					<a class="fancy-button blue title5 waves-effect waves-light btn-small modal-trigger" href="#modalLogin">Log In!</a>
+					<!-- Modal Structure -->
+						<div id="modalLogin" class="modal">
+							<div class="modal-content">
+								<h1 class="card-title">Log In!</h1>
+								<form action="/chores" method="POST">
+									<input type="text" id="name" name="chore_name" placeholder="Chore Name">
+
+									<input type="text" id="instructions" name="instructions" placeholder="Instructions">
+
+									<input type="text" id="points" name="points" placeholder="Points">
+
+									<button type="submit" class="addChoreButton btn waves-effect waves-light">Submit your
+										Chore!</button>
+
+								</form>
+								<div class="modal-footer">
+									<a href="#!" class="modal-close waves-effect waves-green btn-flat">Close</a>
+								</div>
+							</div>
+						</div>
+				</div>
+			</div>
+			<div class="row"></div>
+			<div class="row">
 				<div class="col m12">
-					<span class="black-text">
+					<span>
 						<h4 class="title2 center-align">Chores, Chores, Chores, I love Chores!</h4>
-						<h5></h5>
 					</span>
 					<div class="col m12 center-align">
 						<img src="images/min1.jpg" alt="minion-maid" class="circle responsive-img">
@@ -39,7 +64,7 @@
 			</div>
 
 			<div class="row">
-				<div class="col m6 center-align">
+				<div class="col m12 center-align">
 					<a class="fancy-button blue title4 waves-effect waves-light btn-large modal-trigger" href="#modal1">Create a Chore!</a>
 					<!-- Modal Structure -->
 						<div id="modal1" class="modal">
@@ -61,30 +86,6 @@
 								</div>
 							</div>
 						</div>
-				</div>
-
-				<div class="col m6 center-align">
-					<a class="fancy-button blue title4 waves-effect waves-light btn-large modal-trigger " href="#modal2">Create a Minion!</a>
-					<!-- Modal Structure -->
-					<div id="modal2" class="modal">
-						<div class="modal-content">
-							<h1 class="card-title">CREATE A MINION!</h1>
-							<form action="/user" method="POST">
-								<input type="text" id="userName" name="user_name" placeholder="User Name">
-
-								<input type="text" id="userDescription" name="user_description" placeholder="User Description">
-
-								<!--<input type="text" id="points" name="points" placeholder="Points">  ADD A USER IMAGE HERE?? -->
-
-								<button type="submit" class="addChoreButton btn waves-effect waves-light">Submit your
-									Minion!</button>
-
-							</form>
-						</div>
-						<div class="modal-footer">
-							<a href="#!" class="modal-close waves-effect waves-green btn-flat">Close</a>
-						</div>
-					</div>
 				</div>
 			</div>
 		</div>
