@@ -123,6 +123,16 @@ h4{
     font-size: 50px;
 }
 
+.title3{
+    font-family: 'Luckiest Guy', cursive;
+    font-size: 50px;
+}
+
+.title4{
+    font-family: 'Luckiest Guy', cursive;
+    font-size: 35px;
+}
+
 .topright {
     position: absolute;
     top: 8px;
