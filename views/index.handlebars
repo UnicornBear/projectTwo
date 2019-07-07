@@ -15,6 +15,8 @@
               <p class="italics">Chore ID: {{this.id}}</p>      
             <br>
               <p class="title4">Instructions: {{this.instructions}}</p>
+            <br>
+              <p class="title4">Points: {{this.points}}</p>
           </div>
           <div class="card-action">
             <form action="/chores/{{this.id}}?_method=PUT" method="POST">
