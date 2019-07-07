@@ -4,7 +4,7 @@
     {{#each chores}}
     {{#unless this.completed}}
       <div class="col s4 m4">
-        <div class="card blue-grey darken-1">
+        <div class="fancy-button y card blue-grey darken-1">
             <div class="row">
               <form action="/delete/{{this.id}}?_method=DELETE" method="POST">
                 <button type="submit" class="delete blue waves-effect waves-light btn-small topright"><i class="material-icons">delete_sweep</i></button>
@@ -44,7 +44,7 @@
     <div class="modal-content">
       {{#each chores}}
           {{#if this.completed}}
-            <div class='chore-completed'>
+            <div class='blue chore-completed'>
               <div>
                 {{this.chore_name}} completed by {{this.User.name}} for {{this.points}} points!
               </div>

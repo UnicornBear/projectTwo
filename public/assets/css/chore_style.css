@@ -111,6 +111,18 @@ h4{
     text-shadow: 4px 4px 4px #aaa;
 }
 
+.title{
+    font-family: "Barriecito", cursive;
+    text-shadow: 4px 4px 4px #aaa;
+    font-size: 50px;
+}
+
+.title2{
+    font-family: 'Luckiest Guy', cursive;
+    text-shadow: 4px 4px 4px #aaa;
+    font-size: 50px;
+}
+
 .topright {
     position: absolute;
     top: 8px;
