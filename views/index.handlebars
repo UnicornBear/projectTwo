@@ -8,12 +8,10 @@
             <div class="row">
               <form action="/delete/{{this.id}}?_method=DELETE" method="POST">
                 <button type="submit" class="delete blue waves-effect waves-light btn-small topright"><i class="material-icons">delete_sweep</i></button>
-                {{!-- <a class="delete waves-effect waves-light btn-med topright"><i class="material-icons">delete_sweep</i></a> --}}
               </form>
-
             </div>
           <div class="card-content white-text">
-            <a href="popup/{{this.id}}">{{this.chore_name}}</a>
+            <a class="title3" href="popup/{{this.id}}">{{this.chore_name}}</a>
               <p>Chore ID: {{this.id}}</p>      
             <br>
               <p>Chore Instructions: {{this.instructions}}</p>
@@ -35,7 +33,7 @@
   <hr>
   <div class="row">
     <div class="col m12 center-align">
-  <a class="blue waves-effect waves-light btn modal-trigger" href="#modal3">See All Completed Chores!</a>
+  <a class="blue title4 waves-effect waves-light btn modal-trigger" href="#modal3">See All Completed Chores!</a>
   </div>
   </div>
 
