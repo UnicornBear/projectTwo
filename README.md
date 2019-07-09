@@ -63,7 +63,7 @@ To set up this application locally on your computer, perform the following steps
   7. [Verify database connection information](#db-connect)
   8. [Start the server](#start-server)
 
-### <a name="clone-repository"></a> 1. Clone the repository
+### <a name="clone-repository"></a> Clone the repository and run locally
 The first step is to clone the project repository to a local directory on your computer. To clone the repository, run the following commands:
 <pre>
   git clone git@github.com:UnicornBear/projectTwo.git
@@ -99,9 +99,9 @@ The first step is to clone the project repository to a local directory on your c
 
 
 ## <a name="design-improvements"></a> Design improvements
-
+The application will be upgraded to have User accounts that are password protected.  This will allow us to have set accounts that will replace the keycode current function.  Having a set account, a running points total will be stored for the user.   We also thought about having a prize screen so the Parents can set prizes that can be won when they store enough points from completed chores.   
 
 ## <a name="Acknowledgments"></a> Acknowledgments 
-
+We would like to give thanks to Adam, Abe and Gabe for all their support and hard work.  
 
 ## <a name ="Issues"></a> Issues
