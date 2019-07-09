@@ -1,14 +1,7 @@
+# Minion Family Chore Battle
+*A keep them in line chore app*
 
-# Chores App
-
-The Sequelized sequel to the Chores  app
-
-# Minion Family Chore War Application
-This is an application for a family or room mates to make doing chores and keeping the place clean fun.  Enter Chore Wars and now you are pinged against one another for doing chores.  Who gains the most points, wins the Chore War.  Do you have what it takes to complete more then your family member and earn from them a prize...?
-
-
-<p>A full stack, MVC (Model-View-Controller) application that allows you to ???.</p>
-<img src="">
+This is an application for a family to make doing chores and keeping the home nice and tidy, fun for everyone.  Enter the Minion Family Chore Battle and everyone is in a race getting points for completing chores.  Every family can set points objectives for dinner out, night bowling, or personal reward.   
 
 ## Developers
  Jim Gallagher, Nena Gardner, Justin Bregenzer
@@ -36,13 +29,10 @@ This is an application for a family or room mates to make doing chores and keepi
   * [MVC design pattern](#about-mvc)
  
 ### <a name="how-app-works"></a> How the app works
-*WIP* 
+*You will be able to *
 
 ### <a name="how-the-app-is-built"></a> How the app is built
 This project uses MySQL, Node, Express, Handlebars, ORM (Object Relational Mapper). Node and MySQL are used to query and route data in the application. Express is the backend web framework used for this application, and Handlebars is a templating language that is used to generate the HTML.
-* sequelize
-* API ?
-* materialize, bulma, etc
 
 ### <a name="about-mvc"></a> MVC design pattern
 This project also follows the MVC (Model-View-Controller) design pattern. The MVC design pattern assigns objects in the application one of three roles (model, view, or controller) and defines the way the different parts of the application communicate with one another.
@@ -77,16 +67,16 @@ To set up this application locally on your computer, perform the following steps
 The first step is to clone the project repository to a local directory on your computer. To clone the repository, run the following commands:
 <pre>
   git clone git@github.com:UnicornBear/projectTwo.git
-  cd pprojectTwo
+  cd projectTwo
 </pre>
 
 ## <a name="screenshots"></a> Screenshots
 
 ### Welcome to Our Project #2
-<img src="">
+<img src="public/images/readMe_One.png">
 <br>
 <br>
-<img src="">
+<img src="public/images/readMe_Two.png">
 
 
 ## <a name="technologies-used"></a> Technologies used to build app
@@ -99,11 +89,10 @@ The first step is to clone the project repository to a local directory on your c
 * Express (http://expressjs.com/)
 * ORM - Object Relational Mapping (https://en.wikipedia.org/wiki/Object-relational_mapping)
 
-
 ### <a name="Frontend"></a> Frontend technologies
 * HTML
 * CSS
-* Bootstrap (http://getbootstrap.com/)
+* Materialize (http://materialize.com/)
 * Javascript
 * jQuery (https://jquery.com/)
 * Handlebars (http://handlebarsjs.com/)
