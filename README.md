@@ -50,18 +50,6 @@ For more information about the MVC design pattern, check out the following resou
   * https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93controller
   * https://docs.microsoft.com/en-us/aspnet/core/mvc/overview
 
-## <a name="getting-started"></a> Getting started
-The following section will take you through the steps of setting up this application and getting it running locally on your computer.
-
-To set up this application locally on your computer, perform the following steps:
-  1. [Clone the repository](#clone-repository)
-  2. [Install Node.js](#install-node)
-  3. [Install the dependencies](#dependencies)
-  4. [Install MySQL Workbench](#install-mysql)
-  5. [Set up a development database](#database-setup)
-  6. [Create a .env file to store your MySQL Password](#create-env)
-  7. [Verify database connection information](#db-connect)
-  8. [Start the server](#start-server)
 
 ### <a name="clone-repository"></a> Clone the repository and run locally
 The first step is to clone the project repository to a local directory on your computer. To clone the repository, run the following commands:
