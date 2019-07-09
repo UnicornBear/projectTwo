@@ -29,7 +29,7 @@ This is an application for a family to make doing chores and keeping the home ni
   * [MVC design pattern](#about-mvc)
  
 ### <a name="how-app-works"></a> How the app works
-*You will be able to *
+*The application can be loaded from your local host or can be used via the heroku hosted site above.  When you load the applicaiton you can start to enter in the chores and everyone is now open to see what the chore is and what are the instructions to obtain your points.  You have the ability to view who has completed what chores and how many points they received.  When the chores points are redeemed for a price, the chore can be removed.  If for any reason a chore is not longer required to be completed, you can remove out the chore from the to be completed chores.*
 
 ### <a name="how-the-app-is-built"></a> How the app is built
 This project uses MySQL, Node, Express, Handlebars, ORM (Object Relational Mapper). Node and MySQL are used to query and route data in the application. Express is the backend web framework used for this application, and Handlebars is a templating language that is used to generate the HTML.
