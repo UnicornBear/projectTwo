@@ -73,10 +73,10 @@ The first step is to clone the project repository to a local directory on your c
 ## <a name="screenshots"></a> Screenshots
 
 ### Welcome to Our Project #2
-<img src="public/images/readMe_One.png">
+<img src="/public/images/readMe_One.png">
 <br>
 <br>
-<img src="public/images/readMe_Two.png">
+<img src="/public/images/readMe_Two.png">
 
 
 ## <a name="technologies-used"></a> Technologies used to build app
