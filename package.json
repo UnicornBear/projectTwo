@@ -20,7 +20,7 @@
     "body-parser": "^1.17.1",
     "express": "^4.15.2",
     "express-handlebars": "^3.0.0",
-    "loglevel": "^1.4.1",
+    "loglevel": "^1.9.1",
     "method-override": "^2.3.7",
     "mysql": "^2.13.0",
     "path": "^0.12.7",
